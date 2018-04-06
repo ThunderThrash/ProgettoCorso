@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ProgettoCorso</string>
+    <string name="esempio_relativelayout">Esempio RelativeLayout</string>
+    <string name="button">Button</string>
+    <string name="message_toast">Message by toast</string>
+    <string name="settings">Settings</string>
+    <string name="click_settings">click on settings</string>
+</resources>
