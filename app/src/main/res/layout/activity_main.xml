@@ -27,7 +27,8 @@
         android:layout_toRightOf="@id/editText1"
         android:text="@string/button"
         android:layout_centerHorizontal="true"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"  />
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:background="@drawable/button"/>
 
     <EditText
         android:id="@+id/editText1"
