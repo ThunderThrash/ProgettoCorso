@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -20,17 +20,33 @@ public class MainActivity extends AppCompatActivity {
 
         ((Button) findViewById(R.id.button1)).setOnClickListener(v -> {
 
-            String string = ((EditText) findViewById(R.id.editText1)).getText().toString();
+            EditText editText = findViewById(R.id.editText1);
+
+            String string = editText.getText().toString();
 
             if(TextUtils.isEmpty(string)){
 
-                Toast.makeText(getBaseContext(), R.string.message_toast, Toast.LENGTH_SHORT).show();
+                editText.setError(getString(R.string.value_required));
 
             } else {
+
+                editText.setError(null);
+
+                closeKeyBoard();
 
                 Toast.makeText(getBaseContext(), string, Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void closeKeyBoard() {
+
+        InputMethodManager imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+
+        if(imm!=null && getCurrentFocus()!=null) {
+
+            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        }
     }
 
 
