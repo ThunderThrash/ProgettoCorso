@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ProgettoCorso</string>
+
+    <string name="example_relativelayout">Esempio RelativeLayout</string>
+    <string name="button">Pulsante</string>
+    <string name="message_toast">Messaggio dal toast</string>
+    <string name="settings">Impostazioni</string>
+    <string name="click_settings">Click su Impostazioni</string>
+
+    <string name="pref_sync_frequency">frequenza sincronizzazione</string>
+    <string-array name="syncFrequency">
+        <item >Uno al giorno</item>
+        <item >Uno a settimana</item>
+        <item >Uno all'anno</item>
+        <item >Mai</item>
+    </string-array>
+
+    <string name="pref_notific">Mostra notifiche</string>
+    <string name="pref_user_name">Nome Utente</string>
+
+    <string name="off">Off</string>
+    <string name="on">On</string>
+
+    <string name="ok">OK</string>
+    <string name="value_required">Valore richiesto</string>
+    <string name="cancel">Annulla</string>
+
+</resources>
