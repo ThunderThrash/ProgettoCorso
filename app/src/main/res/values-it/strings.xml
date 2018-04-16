@@ -25,5 +25,9 @@
     <string name="ok">OK</string>
     <string name="value_required">Valore richiesto</string>
     <string name="cancel">Annulla</string>
+    <string name="male">Maschio</string>
+    <string name="female">Femmmina</string>
+    <string name="accept_the_terms_of_service">Accetto i termini di servizio</string>
+    <string name="start_new_activity">Avvia nuova activity</string>
 
 </resources>

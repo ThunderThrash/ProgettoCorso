@@ -1,118 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical">
+    android:paddingTop="@dimen/activity_vertical_margin" >
 
-    <TextView
-        android:id="@+id/user_name"
-        android:layout_width="match_parent"
-        android:padding="8dp"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:hint="@string/pref_user_name"
-        android:focusable="true" />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/colorBlack"
-        />
-
-    <RadioGroup
-        android:id="@+id/radioSex"
-        android:padding="8dp"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <RadioButton
-            android:id="@+id/radioMale"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:padding="8dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:text="Male"
-            android:checked="false" />
+            android:clickable="true"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:hint="@string/pref_user_name"
+            android:focusable="true" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorBlack"
+            />
 
-        <RadioButton
-            android:id="@+id/radioFemale"
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:id="@+id/radioSex"
+            android:padding="8dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:checked="false"
-            android:text="Female" />
+            android:orientation="horizontal">
 
-    </RadioGroup>
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="@string/male"
+                android:checked="false" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/colorBlack"
-        />
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:checked="false"
+                android:text="@string/female" />
 
-    <CheckBox
-        android:id="@+id/chkToS"
-        android:padding="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:text="Accept the terms of service"
-        android:textDirection="ltr"
-        android:layoutDirection="rtl"
-        android:checked="true" />
+        </RadioGroup>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/colorBlack"
-        />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorBlack"
+            />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:padding="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:checked="true"
-        android:text="@string/pref_notific"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:textOff="@string/off"
-        android:textOn="@string/on" />
+        <CheckBox
+            android:id="@+id/chkToS"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:text="@string/accept_the_terms_of_service"
+            android:textDirection="ltr"
+            android:layoutDirection="rtl"
+            android:checked="true" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/colorBlack"
-        />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorBlack"
+            />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:padding="8dp"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-        android:text="@string/pref_sync_frequency" />
+        <Switch
+            android:id="@+id/switch1"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/pref_notific"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textOff="@string/off"
+            android:textOn="@string/on" />
 
-    <Spinner
-        android:id="@+id/spinner1"
-        android:paddingEnd="8dp"
-        android:paddingStart="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:entries="@array/syncFrequency"
-        android:prompt="@string/pref_sync_frequency" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorBlack"
+            />
 
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:padding="8dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:text="@string/pref_sync_frequency" />
 
+        <Spinner
+            android:id="@+id/spinner1"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:entries="@array/syncFrequency"
+            android:prompt="@string/pref_sync_frequency" />
+
+    </LinearLayout>
+</ScrollView>
 
