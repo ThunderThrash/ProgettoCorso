@@ -7,7 +7,6 @@ import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -18,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ((Button) findViewById(R.id.button1)).setOnClickListener(v -> {
+        findViewById(R.id.button1).setOnClickListener(v -> {
 
             EditText editText = findViewById(R.id.editText1);
 
@@ -36,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
 
                 Toast.makeText(getBaseContext(), string, Toast.LENGTH_SHORT).show();
             }
+        });
+
+        findViewById(R.id.button2).setOnClickListener(v -> {
+
+            startActivity( new Intent(this, WebViewActivity.class) );
         });
     }
 

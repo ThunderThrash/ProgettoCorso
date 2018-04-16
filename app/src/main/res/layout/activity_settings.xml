@@ -17,6 +17,57 @@
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:hint="@string/pref_user_name"
         android:focusable="true" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorBlack"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioSex"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Male"
+            android:checked="false" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:checked="false"
+            android:text="Female" />
+
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorBlack"
+        />
+
+    <CheckBox
+        android:id="@+id/chkToS"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:text="Accept the terms of service"
+        android:textDirection="ltr"
+        android:layoutDirection="rtl"
+        android:checked="true" />
 
     <View
         android:layout_width="match_parent"

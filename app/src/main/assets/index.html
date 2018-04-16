@@ -1,0 +1,35 @@
+
+<!-- saved from url=(0073)http://www.cosenonjaviste.it/wp-content/uploads/2012/04/funzione_css.html -->
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <style type="text/css">
+	p {
+		background: #EEE;
+		padding: 15px;
+		border: 1px solid #CCCCCC;
+	}
+
+	button{
+		background: #7f8c8d;
+		padding: 15px;
+		border: 0px solid #FFF;
+	}
+  </style>
+ </head>
+ <body>
+
+	<h2> Pagina HTML</h2>
+
+    <p id="content"> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <br/>
+    <button id="test" onclick="myFunction()">Test Javascript</button>
+    <script>
+       function myFunction() {
+           document.getElementById("content").innerHTML = "Javascript abilitato!";
+           document.getElementById("test").style.display = 'none';
+       }
+    </script>
+ </body>
+
+</html>
