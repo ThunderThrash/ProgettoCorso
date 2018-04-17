@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.button2).setOnClickListener(v -> {
 
-            startActivity( new Intent(this, WebViewActivity.class) );
+            startActivity( new Intent(this, ListSampleActivity.class) );
         });
     }
 
