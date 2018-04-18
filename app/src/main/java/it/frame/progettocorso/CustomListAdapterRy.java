@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 
 public class CustomListAdapterRy extends RecyclerView.Adapter<CustomListAdapterRy.ViewHolder> {
@@ -17,12 +16,11 @@ public class CustomListAdapterRy extends RecyclerView.Adapter<CustomListAdapterR
     //ViewHolder inner class
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView itemName;
-        TextView itemDescription;
+        TextView itemName, itemDescription;
 
-        public ViewHolder(View view)
-        {
+        public ViewHolder(View view){
             super(view);
+
             itemName = view.findViewById(R.id.text_view_item_name);
             itemDescription =  view.findViewById(R.id.text_view_item_description);
 
@@ -37,21 +35,15 @@ public class CustomListAdapterRy extends RecyclerView.Adapter<CustomListAdapterR
         }
     }
 
-    public CustomListAdapterRy(ArrayList<Item> items) {
+    public CustomListAdapterRy(ArrayList<Item> items) {  this.items = items; }
 
-        this.items = items;
-    }
-
-
-    @NonNull
-    @Override
+    @NonNull @Override
     public CustomListAdapterRy.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.layout_list_view_row_items_card, parent, false);
 
-        ViewHolder vh = new ViewHolder(v);
-        return vh;
+        return new ViewHolder(v);
     }
 
     @Override
