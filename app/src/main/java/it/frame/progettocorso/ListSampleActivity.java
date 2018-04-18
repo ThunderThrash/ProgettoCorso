@@ -1,12 +1,9 @@
 package it.frame.progettocorso;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AbsListView;
-import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
 import java.util.ArrayList;
 
@@ -19,20 +16,16 @@ public class ListSampleActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        AbsListView itemsListView  = (ListView) findViewById(R.id.list_view_items);
+        RecyclerView itemsListView  = (RecyclerView) findViewById(R.id.list_view_items);
+        itemsListView.setHasFixedSize(true);
 
-        //create adapter object
-        CustomListAdapter adapter = new CustomListAdapter(this, generateItemsList());
+        //new GridLayoutManager(this,2); per generare una griglia a 2 colonne
+        itemsListView.setLayoutManager( new LinearLayoutManager(this));
+
+        CustomListAdapterRy adapter = new CustomListAdapterRy(generateItemsList());
 
         //set custom adapter as adapter to our list view
         itemsListView.setAdapter(adapter);
-
-        itemsListView.setOnItemClickListener( (AdapterView<?> parent, View view, int position, long id) -> {
-
-            Item selected = (Item) adapter.getItem(position);
-
-            Toast.makeText(this, selected.getItemName() ,Toast.LENGTH_SHORT).show();
-        });
     }
 
     /**
